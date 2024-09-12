@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numero;
+
+    // Entrada do número
+    cout << "Digite um número inteiro de até 3 dígitos: ";
+    cin >> numero;
+
+    // Verifica a quantidade de dígitos
+    if (numero >= 0 && numero <= 9) {
+        cout << "O número " << numero << " tem 1 dígito." << endl;
+    }
+    else if (numero >= 10 && numero <= 99) {
+        cout << "O número " << numero << " tem 2 dígitos." << endl;
+    }
+    else if (numero >= 100 && numero <= 999) {
+        cout << "O número " << numero << " tem 3 dígitos." << endl;
+    }
+    else if (numero <= -1 && numero >= -9) {
+        cout << "O número " << numero << " tem 1 dígito." << endl;
+    }
+    else if (numero <= -10 && numero >= -99) {
+        cout << "O número " << numero << " tem 2 dígitos." << endl;
+    }
+    else if (numero <= -100 && numero >= -999) {
+        cout << "O número " << numero << " tem 3 dígitos." << endl;
+    }
+    else {
+        cout << "Número fora do intervalo permitido (até 3 dígitos)." << endl;
+    }
+
+    return 0;
+}
