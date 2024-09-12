@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+using namespace std;
+
+int main() {
+  
+    float altura, largura, comprimento, consumoDiario;
+
+    // Entrada dos tamanho do reservatorio
+    cout << "Digite a altura do reservatorio (em cm): ";
+    cin >> altura;
+    cout << "Digite a largura do reservatorio (em cm): ";
+    cin >> largura;
+    cout << "Digite o comprimento do reservatorio (em cm): ";
+    cin >> comprimento;
+
+    // Entrada do consumo  diário
+    cout << "Digite o consumo médio diario (em litros/dia): ";
+    cin >> consumoDiario;
+
+    // Cálculo da capacidade total do reservatorio 
+    float volumeCm3 = altura * largura * comprimento; // Volume em cm³
+    float capacidadeLitros = volumeCm3 / 1000;        // 1 litro = 1000 cm³
+
+    // Cálculo da autonomia do reservatorio em dias
+    float autonomiaDias = capacidadeLitros / consumoDiario;
+
+    // Exibindo os resultados
+    cout << "Capacidade total do reservatorio: " << capacidadeLitros << " litros" << endl;
+    cout << "Autonomia do reservatorio: " << autonomiaDias << " dias" << endl;
+
+    // Classificação do consumo
+    if (autonomiaDias < 2) {
+        cout << "Classificação: Consumo elevado." << endl;
+    } else if (autonomiaDias >= 2 && autonomiaDias <= 7) {
+        cout << "Classificação: Consumo moderado." << endl;
+    } else {
+        cout << "Classificação: Consumo reduzido." << endl;
+    }
+
+    return 0;
+}
+
